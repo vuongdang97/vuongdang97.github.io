@@ -9,7 +9,7 @@ You can find my CV here.
 
 ## Scientific posts
 
-- [Information Theory](Information Theory/capacity.md)
+- [Information Theory](Information Theory/list.md)
 
-- [Quantum computing](Quantum computing/capacity.md)
+- [Quantum computing](Quantum computing/list.md)
 

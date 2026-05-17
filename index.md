@@ -7,7 +7,7 @@ I obtained my PhD in applied mathematics in 2023 at University of Paris 13. Curr
 You can find my CV here. 
 - [CV](CV/CV_Vuong_Eng.pdf)
 
-## Scientific posts
+## Scientific notes 
 
 - [Information Theory](Information Theory/list.md)
 

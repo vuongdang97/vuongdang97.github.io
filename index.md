@@ -1,6 +1,6 @@
-# Welcome
+## About me
 
-Hi, I'm writting this blog to note information theory and quantum computing
+I obtained my PhD in applied mathematics in 2023 at University of Paris 13.
 
 ## My CV
 - [CV](CV/CV_Vuong_Eng.pdf)

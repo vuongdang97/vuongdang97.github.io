@@ -1,6 +1,6 @@
 ## About me
 
-I obtained my PhD in applied mathematics in 2023 at University of Paris 13. Currently, I am an algorithm researcher at Viettel High Tech focusing on optimization of algorithm around physical layer and MIMO system of 5G NR.
+I obtained my PhD in applied mathematics in 2023 at University of Paris 13. Currently, I am an algorithm researcher at Viettel High Tech specializing in algorithm optimization around physical layer and MIMO system of 5G NR.
 
 ## My CV
 

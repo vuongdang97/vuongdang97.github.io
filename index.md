@@ -18,9 +18,9 @@ You can find my CV here.
 
 ## Publications
 
-2. (with L.Halpern and B.Delourme) Time Parallelization of a Distributed Optimal Control Problem for the Wave Equation, [28th International Conference on Domain Decomposition Methods at KAUST, Saudi Arabia](https://dd28.kaust.edu.sa/) ([link](https://www.ddm.org/DD28/proceedings/DD28_271.pdf)).
+1. (with L.Halpern and B.Delourme) Time Parallelization of a Distributed Optimal Control Problem for the Wave Equation, [28th International Conference on Domain Decomposition Methods at KAUST, Saudi Arabia](https://dd28.kaust.edu.sa/) ([link](https://www.ddm.org/DD28/proceedings/DD28_271.pdf)).
 
-1. On the boundary controlled wave equation (unpublished) ([link](https://hal.science/hal-04463449)).
+2. On the boundary controlled wave equation (unpublished) ([link](https://hal.science/hal-04463449)).
 
 ## Notes 
 

@@ -9,6 +9,7 @@ You can find my CV here.
 
 ## Selected talks 
 
+- [Research school: Domain Decomposition Method for Optimal control problem](Talks/Poster_timeDDMwithOptimalControl.pdf)
 
 ## Publication
 

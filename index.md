@@ -9,9 +9,9 @@ You can find my CV here.
 
 ## Selected talks 
 
-- 09/2022: [Research school: Domain Decomposition Method for Optimal control problem](https://conferences.cirm-math.fr/2644.html)  [(poster)](Talks/Poster_timeDDMwithOptimalControl.pdf)
+- 09/2022: Schwarz method in time for internal controlled wave problem - [Research school: Domain Decomposition Method for Optimal control problem](https://conferences.cirm-math.fr/2644.html)  [(poster)](Talks/Poster_timeDDMwithOptimalControl.pdf)
 
-## Publication
+## Publications
 
 
 ## Notes 

@@ -17,5 +17,7 @@ You can find my CV here.
 
 - [Information Theory](Information Theory/list.md)
 
+- [Numerical Analysis](Numerical Analysis/list.md)
+
 - [Quantum computing](Quantum computing/list.md)
 

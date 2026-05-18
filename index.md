@@ -12,6 +12,10 @@ You can find my CV here.
 
 - 09/2022: Schwarz method in time for internal controlled wave problem ([poster](Talks/Poster_timeDDMwithOptimalControl.pdf)) - [Research school: Domain Decomposition Method for Optimal control problem](https://conferences.cirm-math.fr/2644.html)  
 
+- 02/2022: An introduction to optimal control and controlled wave problem ([slide](Talks/Doctoral_seminar.pdf)) - Doctoral Seminar, LAGA
+
+- 09/2021: Parallelisation of an optimal control problem with wave constrains - Parallelization and Control day, LAGA
+
 ## Publications
 
 

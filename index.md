@@ -9,7 +9,7 @@ You can find my CV here.
 
 ## Selected talks 
 
-- 09/2022: [Research school: Domain Decomposition Method for Optimal control problem](Talks/Poster_timeDDMwithOptimalControl.pdf)
+- 09/2022: [Research school: Domain Decomposition Method for Optimal control problem](https://conferences.cirm-math.fr/2644.html)[slides](Talks/Poster_timeDDMwithOptimalControl.pdf)
 
 ## Publication
 

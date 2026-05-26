@@ -30,3 +30,7 @@ You can find my CV here.
 
 - [Quantum computing](Quantum computing/list.md)
 
+## Some useful links
+
+- [5G/6G](5G/list.md)
+

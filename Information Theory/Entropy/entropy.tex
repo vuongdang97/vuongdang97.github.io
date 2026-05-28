@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage{amsthm}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+
+\title{Entropy}
+\author{Thanh Vuong Dang}
+\date{25/05/2026}
+
+\begin{document}
+
+\maketitle
+
+Following the well-known paper of C.E.Shannon $\cite{shannon}$, we present some fundamental properties of entropy in information theory.
+\begin{definition}
+Given a set of possible events with probability occurrence $p_{1}, p_{2}, ... p_{n}.$ The entropy $H$ is defined as
+\begin{equation}
+H = -K \sum_{i= 1}^{n}p_{i}\log(p_{i}), 
+\end{equation}
+where $K$ is a positive constant. \\
+Denote $H = H(p_{1}, p_{2}, ..., p_{n})$
+\end{definition}
+With the formula in the definition, we have some properties regarding to entropy (mentioning in Wikipedia \cite{wikipedia_entropy_information_theory}).  
+\begin{proposition}
+$H$ is satisfied some properties. 
+\begin{itemize}
+    \item \textbf{Continuity:} $H$ is continuous with respect to all $p_{i}$. 
+    \item \textbf{Symmetry:} The value of $H$ is unchanged for any permutations of $p_{i}$.
+    \item \textbf{Maximum:} $H$ is maximum when all probabilities $p_{i}$ are equal. 
+    \item \textbf{Increasing property:} Under the condition of equiprobable events, the entropy increase when all outcomes increase, i.e  
+    $$H\left(\frac{1}{n}, \frac{1}{n}, ..., \frac{1}{n}\right) < H\left(\frac{1}{n+1}, \frac{1}{n+1}, ..., \frac{1}{n+1}\right).$$
+    \item \textbf{Additivity:}
+\end{itemize}
+\end{proposition}
+The properties of entropy for random variables $X, Y$ is described as
+\begin{proposition}
+\begin{itemize}
+    \item \textbf{Subadditivity:} $H(X, Y) \leq H(X) + H(Y)$ for jointly distributed random variables $X, Y$. 
+    \item \textbf{Additivity:} $H(X, Y) = H($.
+    \item \textbf{Expansibility:} $H$ is maximum when all probabilities $p_{i}$ are equal. 
+    \item \textbf{Symmetry:} Under the condition of equiprobable events, the entropy increase when all outcomes increase, i.e  
+    $$H\left(\frac{1}{n}, \frac{1}{n}, ..., \frac{1}{n}\right) < H\left(\frac{1}{n+1}, \frac{1}{n+1}, ..., \frac{1}{n+1}\right).$$
+    \item \textbf{Small for small probability:} $\lim_{q \to 0}H(q,1-q) = 0.$
+\end{itemize}
+\end{proposition}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

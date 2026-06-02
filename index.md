@@ -23,6 +23,7 @@ You can find my CV here.
 2. On the boundary controlled wave equation,2023 (unpublished) ([link](https://hal.science/hal-04463449)).
 
 ## Notes 
+- [Algebra](Algebra/list.md)
 
 - [Information Theory](Information Theory/list.md)
 

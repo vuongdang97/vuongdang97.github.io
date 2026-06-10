@@ -28,4 +28,20 @@
 		\item[6] \textbf{Identity Elements:} The Galois Field has two identity elements, 0 for addition and 1 for multiplication. Any element added with 0 is equal to the original element, and any element multiplied by 1 is equal to the original element.
 		\item[7] \textbf{Inverse Elements:} Every element in the Galois Field has an inverse element under both addition and multiplication operations. The inverse element for addition is the negative of the original element, and the inverse element for multiplication is the reciprocal of the original element.
 	\end{itemize}
+
+\section{Algorithm of polynomial division over $GF(2)$}
+    Given two polynomial $A(x)$ and $B(x)$ on $GF(2)$, we set $Q(x)$ is the quotient of division $A/B$ and $R(x)$ is the corresponding remainder. Initialize $Q(x) = 0$ and $R(x) = A(x)$. Let $M = deg(A)$. \\
+    While $M \geq deg(B)$, do: 
+    \begin{itemize}
+        \item[1] Let $$t(x) = \epsilon x^{M-deg(B)},$$ 
+        where $\epsilon = 1$ if $M = deg(R)$, otherwise $\epsilon = 0$.
+        \item[2] Update quotient: 
+        $$ Q(x) = Q(x) \oplus t(x).$$
+        \item[3] Update remainder:
+        $$R(x) = R(x) \oplus t(x)B(x).$$
+        \item[4] Update iteration step: 
+        $$M = M - 1.$$
+    \end{itemize}
+    Stop when $M < deg(B).$ \\
+    Return $A(x) = Q(x)B(x) + R(X).$
 \end{document}

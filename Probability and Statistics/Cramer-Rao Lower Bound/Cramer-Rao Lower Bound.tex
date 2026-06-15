@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsthm}
+
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Cramer-Rao Lower Bound}
+\author{Thanh Vuong Dang}
+
+\begin{document}
+\maketitle
+Following the book \cite{Kay}, we present some versions of Cramer Rao Lower Bound theorem.
+\section{Scalar version}
+\begin{theorem}
+Given a probability distribution function (PDF) $p(x;\theta)$ satisfy the "regularity" condition
+\begin{equation}\label{1}
+E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = 0, \; \forall \theta,
+\end{equation}
+where the expectation is taken with respect to $p(x;\theta)$. Then, the variance of any unbiased estimator $\widehat{\theta}$ must not lower than 
+\begin{equation}\label{2}
+    \operatorname{Var}(\widehat{\theta}) \geq \dfrac{1}{-E\left[\frac{\partial^{2}ln\; p(x; \theta)}{\partial \theta^{2}}\right]},
+\end{equation}
+where the derivative at the true value of $\theta$ and the expectation is taken with respect to $p(x;\theta)$. Furthermore, the equality occurs for a specific unbiased estimator $\widehat{\theta} = g(x)$ if and only if
+\begin{equation}
+\dfrac{\partial ln\;p(x;\theta)}{\partial \theta} = I(\theta)(g(x) - \theta), \; \forall \theta,
+\end{equation}
+for some function $g$ and $I$. $\widehat{\theta} =  g(x)$ is called MVU estimator and the minimum variance is $\dfrac{1}{I(\theta)}.$
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{remark}
+The expectation from $\eqref{1}$ and $\eqref{2}$ is determined as
+$$E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = \int\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}p(x;\theta)dx,$$
+and 
+$$E\left[\dfrac{\partial^{2} ln \; p(x,\theta)}{\partial \theta^{2}}\right] = \int\dfrac{\partial^{2} ln \; p(x,\theta)}{\partial \theta^{2}}p(x;\theta)dx.$$
+\end{remark}
+
+\section{Vector version}
+\begin{theorem}
+It is assumed that the PDF $p(x;\theta)$ satisfies the "regularity" conditions
+\begin{equation}
+E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = 0, \; \forall \theta,
+\end{equation}
+where the expectation is taken with respect to $p(x;\theta)$. Then, the covariance matrix of any unbiased estimator $\widehat{\theta}$ satisfies 
+\begin{equation}
+    C_{\widehat{\theta}} - I^{-1}(\theta) \geq 0,
+\end{equation}
+where $\geq 0$ means that the matrix is positive semidefinite. The Fisher information matrix $$[I(\theta)]_{ij} = -E\left[\dfrac{\partial^{2}ln \; p(x;\theta)}{\partial \theta_{i}\theta_{j}}\right]$$
+where the derivative are evaluated at the true value of $\theta$ and the expectation is taken with respect to $p(x;\theta)$. Furthermore, an unbiased estimator that makes $C_{\widehat{\theta}} = I^{-1}(\theta)$ if and only if
+\begin{equation}
+\dfrac{\partial ln \; p(x;\theta)}{\partial \theta} = I(\theta)(g(x) - \theta),
+\end{equation}
+for some p-dimensional function $g$ and some $p\times p$ matrix $I$. $\widehat{\theta} = g(x)$ is MVU estimator and its covariance matrix is $I^{-1}(\theta)$. 
+\begin{proof}
+
+\end{proof}
+\end{theorem}
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{amsthm}
+
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+
+\title{Cramer-Rao Lower Bound}
+\author{Thanh Vuong Dang}
+
+\begin{document}
+\maketitle
+Following the book \cite{Kay}, we present some versions of Cramer-Rao Lower Bound theorem.
+\section{Scalar version}
+\begin{theorem}
+Given a probability density function (PDF) $p(x;\theta)$ satisfy the "regularity" condition
+\begin{equation}\label{1}
+E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = 0, \; \forall \theta,
+\end{equation}
+where the expectation is taken with respect to $p(x;\theta)$. Then, the variance of any unbiased estimator $\widehat{\theta}$ must not lower than 
+\begin{equation}\label{2}
+    \operatorname{Var}(\widehat{\theta}) \geq \dfrac{1}{-E\left[\frac{\partial^{2}ln\; p(x; \theta)}{\partial \theta^{2}}\right]},
+\end{equation}
+where the derivative at the true value of $\theta$ and the expectation is taken with respect to $p(x;\theta)$. Furthermore, the equality occurs for a specific unbiased estimator $\widehat{\theta} = g(x)$ if and only if
+\begin{equation}\label{3}
+\dfrac{\partial ln\;p(x;\theta)}{\partial \theta} = I(\theta)(g(x) - \theta), \; \forall \theta,
+\end{equation}
+for some functions $g$ and $I$. $\widehat{\theta} =  g(x)$ is called MVU estimator and the minimum variance is $\dfrac{1}{I(\theta)}.$
+\end{theorem}
+\begin{proof}
+Let $g(\theta) = \alpha$. We consider all of unbiased estimator $\widehat{\alpha}$ with $E(\widehat{\alpha}) = \alpha = g(\theta).$ \\
+We consider the regularity condition 
+$$E\left(\dfrac{\partial ln \;p(x;\theta)}{\partial \theta}\right) = 0.$$
+\begin{align*}
+    \int \dfrac{\partial ln\; p(x;\theta)}{\partial \theta}p(x;\theta) dx &= \int \dfrac{\partial p(x;\theta)}{\partial \theta}dx \\
+    &= \dfrac{\partial}{\partial \theta}\int p(x;\theta)dx \\
+    &= \dfrac{\partial 1}{\partial \theta} \\
+    &= 0.
+\end{align*}
+This condition is simply just the interchange property between integration and derivative. Then, we can check the regularity condition by verifying this property. \\
+From the unbiased estimator $\widehat{\alpha}$, 
+\begin{equation}\label{4}
+    \int \widehat{\alpha}p(x;\theta) = g(\theta).
+\end{equation}
+Differentiate both side of $\eqref{4}$ respect to $\theta$, we have 
+\begin{equation}\label{5}
+    \int\widehat{\alpha}\dfrac{\partial p(x;\theta)}{\partial \theta}dx = \dfrac{\partial g(\theta)}{\partial \theta}
+\end{equation}
+or 
+\begin{equation}\label{6}
+    \int\widehat{\alpha}\dfrac{\partial ln\; p(x;\theta)}{\partial \theta} p(x;\theta) dx = \dfrac{\partial g(\theta)}{\partial \theta}
+\end{equation}
+From the regularity condition, we can modify $\eqref{6}$ as 
+\begin{equation}
+\int(\widehat{\alpha} - \alpha)\dfrac{\partial ln\; p(x;\theta)}{\partial \theta}p(x;\theta)dx = \dfrac{\partial g(\theta)}{\partial \theta}.
+\end{equation}
+We apply the Cauchy - Schwarz inequality in the form 
+\begin{equation}\label{8}
+\left(\int w(x)g(x)h(x)dx\right)^{2} \leq \int w(x)g^{2}(x)dx \int w(x)h^{2}(x)dx,
+\end{equation}
+where $w(x) \geq 0$. The equality occurs if and only if $g(x) =  c h(x)$ for some constants c. \\
+Let $w(x) = p(x;\theta)$, $g(x) = \alpha - \widehat{\alpha}$ and $h(x) = \dfrac{\partial ln \; p(x;\theta)}{\partial \theta}.$ \\
+Apply Cauchy Schwarz  $\eqref{8}$ inequality, 
+\begin{equation}\label{9}
+    \left(\dfrac{\partial g(\theta)}{\partial \theta}\right)^{2} \leq \int(\alpha - \widehat{\alpha})^{2}p(x;\theta)dx \int\left(\dfrac{\partial ln \; p(x;\theta)}{\partial \theta}\right)^{2}p(x;\theta)dx
+\end{equation}
+We can rewrite \eqref{9} as 
+\begin{equation}\label{10}
+\operatorname{Var(\widehat{\alpha})} \geq \dfrac{\left(\frac{\partial g(\theta)}{\partial \theta}\right)^{2}}{E\left[\left(\frac{\partial ln\;p(x;\theta)}{\partial \theta}\right)^{2}\right]}
+\end{equation}
+We mention the regularity condition 
+\begin{equation}\label{11}
+\int \dfrac{\partial ln\;p(x;\theta)}{\partial \theta}p(x;\theta)= 0.
+\end{equation}
+Differentiate left side of \eqref{11} with respect to $\theta$ \\
+\begin{align*}
+\dfrac{\partial }{\partial \theta}\int \dfrac{\partial ln\;p(x;\theta)}{\partial \theta}p(x;\theta) &= \int \dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}p(x;\theta) + \dfrac{\partial ln\;p(x;\theta)}{\partial \theta}\dfrac{\partial p(x;\theta)}{\partial \theta}dx \\
+& = \int \dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}p(x;\theta) + \left(\dfrac{\partial ln\;p(x;\theta)}{\partial \theta}\right)^{2} p(x;\theta)dx \\
+&= E\left(\dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}\right) + E\left(\left(\dfrac{\partial ln\;p(x;\theta)}{\partial \theta}\right)^{2}\right)
+\end{align*}
+With the right side of regularity condition always zero, then 
+\begin{equation}\label{12}
+    -E\left(\dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}\right) = E\left(\left(\dfrac{\partial ln\;p(x;\theta)}{\partial \theta}\right)^{2}\right)
+\end{equation}
+Replace \eqref{12} into inequality  \eqref{10}, we obtain
+\begin{equation}\label{13}
+    \operatorname{Var(\widehat{\alpha})} \geq \dfrac{\left(\frac{\partial g(\theta)}{\partial \theta}\right)^{2}}{-E\left(\dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}\right)}.
+\end{equation}
+The inequality \eqref{2} is derived by setting $g(\theta) = \theta$ in $\eqref{13}.$ \\
+The condition for equality is 
+\begin{equation}\label{14}
+\dfrac{\partial ln\; p(x;\theta)}{\partial \theta} = \dfrac{1}{c(\theta)}(\widehat{\theta} - \theta).
+\end{equation}
+Differentiate both side of $\eqref{14}$ and take the expectation, 
+\begin{equation}
+-E\left(\dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}\right) = \dfrac{1}{c(\theta)}
+\end{equation}
+or 
+\begin{equation}
+c(\theta) = \dfrac{1}{-E\left(\dfrac{\partial^{2} ln\; p(x;\theta)}{\partial \theta^{2}}\right)} = I(\theta),
+\end{equation}
+which gives $\eqref{3}.$
+\end{proof}
+
+\begin{remark}
+The expectation from $\eqref{1}$ and $\eqref{2}$ is determined as
+$$E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = \int\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}p(x;\theta)dx,$$
+and 
+$$E\left[\dfrac{\partial^{2} ln \; p(x,\theta)}{\partial \theta^{2}}\right] = \int\dfrac{\partial^{2} ln \; p(x,\theta)}{\partial \theta^{2}}p(x;\theta)dx.$$
+\end{remark}
+
+\section{Vector version}
+\begin{theorem}
+It is assumed that the PDF $p(x;\theta)$ satisfies the "regularity" conditions
+\begin{equation}
+E\left[\dfrac{\partial ln \; p(x,\theta)}{\partial \theta}\right] = 0, \; \forall \theta,
+\end{equation}
+where the expectation is taken with respect to $p(x;\theta)$. Then, the covariance matrix of any unbiased estimator $\widehat{\theta}$ satisfies 
+\begin{equation}
+    C_{\widehat{\theta}} - I^{-1}(\theta) \geq 0,
+\end{equation}
+where $\geq 0$ means that the matrix is positive semidefinite. The Fisher information matrix $$[I(\theta)]_{ij} = -E\left[\dfrac{\partial^{2}ln \; p(x;\theta)}{\partial \theta_{i}\theta_{j}}\right]$$
+where the derivative are evaluated at the true value of $\theta$ and the expectation is taken with respect to $p(x;\theta)$. Furthermore, an unbiased estimator that makes $C_{\widehat{\theta}} = I^{-1}(\theta)$ if and only if
+\begin{equation}
+\dfrac{\partial ln \; p(x;\theta)}{\partial \theta} = I(\theta)(g(x) - \theta),
+\end{equation}
+for some p-dimensional function $g$ and some $p\times p$ matrix $I$. $\widehat{\theta} = g(x)$ is MVU estimator and its covariance matrix is $I^{-1}(\theta)$. 
+\begin{proof}
+
+\end{proof}
+\end{theorem}
+
+\section{Some example for scalar CRLB}
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\end{document}

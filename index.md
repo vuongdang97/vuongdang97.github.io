@@ -7,6 +7,9 @@ I obtained my PhD in applied mathematics in 2023 at University of Paris 13. Curr
 You can find my CV here. 
 - [CV](CV/CV_Vuong_Eng.pdf)
 
+I also interested in postdoc position (if possible). My academic CV
+- [CV_academic](CV/CV_academic.pdf)
+
 ## Selected talks 
 - 06/2023: An internal controlled wave problem: Schwarz and Dirichlet-Neumann parallel in time methods ([slide](Talks/Workshop_presentation.pdf)) - [Workshop on Assimilation, Control and Computational Speedup, LAGA](https://workshopallowap.sciencesconf.org/program) 
 

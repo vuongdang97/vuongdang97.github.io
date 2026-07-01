@@ -10,6 +10,10 @@ You can find my CV here.
 I also interested in postdoc position (if possible). My academic CV
 - [CV_academic](CV/CV_academic.pdf)
 
+C'est mon CV français. 
+- [CV_français](CV/CV_Vuong_fr.pdf)
+
+
 ## Selected talks 
 - 06/2023: An internal controlled wave problem: Schwarz and Dirichlet-Neumann parallel in time methods ([slide](Talks/Workshop_presentation.pdf)) - [Workshop on Assimilation, Control and Computational Speedup, LAGA](https://workshopallowap.sciencesconf.org/program) 
 
